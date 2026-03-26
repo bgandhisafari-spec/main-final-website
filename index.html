@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buseyi's Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<h1>MY WEBSITE</h1>
+
+<div class="nav-links">
+<a class="nav-link active" href="#" onclick="showSection('home')">Home</a>
+<a class="nav-link" href="#" onclick="showSection('about')">About Me</a>
+<a class="nav-link" href="#" onclick="showSection('skills')">Skills</a>
+<a class="nav-link" href="#" onclick="showSection('projects')">Projects</a>
+<a class="nav-link" href="#" onclick="showSection('feedback')">Feedback</a>
+<a class="nav-link" href="#" onclick="showSection('game')">Game</a>
+<a class="nav-link" href="#" onclick="showSection('contact')">Contact</a>
+</div>
+
+</nav>
+
+<!-- HOME SECTION -->
+<section id="home" class="page-section active">
+<img src="https://i.postimg.cc/0QsjjyTQ/1D3A4833.jpg" alt="Buseyi Safari">
+<h2>Passion moves the world.</h2>
+<p>Welcome to my portfolio! I'm Buseyi, a technology enthusiast learning STEM and building amazing projects.</p>
+<button class="cta-button" onclick="showSection('about')">Learn More About Me →</button>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="page-section">
+<h2>About Me</h2>
+
+<p>
+Hi, my name is Buseyi. I enjoy learning STEM subjects and developing new technical skills.
+This portfolio shows some of my projects and abilities that I have developed while studying technology.
+I am passionate about building solutions that solve real-world problems and exploring innovative technologies.
+</p>
+
+<div class="about-content">
+<div class="about-item">
+<h3>🎯 My Goal</h3>
+<p>To become a skilled developer and engineer who creates impactful solutions.</p>
+</div>
+
+<div class="about-item">
+<h3>📚 What I Do</h3>
+<p>I develop projects combining hardware and software, from gas detectors to interactive applications.</p>
+</div>
+
+<div class="about-item">
+<h3>🚀 My Passion</h3>
+<p>Innovation, problem-solving, and continuous learning drive everything I create.</p>
+</div>
+</div>
+
+<div class="nav-buttons">
+<button class="nav-btn" onclick="showSection('home')">← Back to Home</button>
+<button class="nav-btn" onclick="showSection('skills')">Next: Skills →</button>
+</div>
+
+</section>
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="page-section">
+
+<h2>My Skills</h2>
+
+<div class="skill-bar">
+<span>Basketball 🏀</span>
+<div class="bar">
+<div class="fill" style="width:85%"></div>
+</div>
+</div>
+
+<div class="skill-bar">
+<span>Chess ♟️</span>
+<div class="bar">
+<div class="fill" style="width:40%"></div>
+</div>
+</div>
+
+<div class="skill-bar">
+<span>HTML 🧑‍💻</span>
+<div class="bar">
+<div class="fill" style="width:60%"></div>
+</div>
+</div>
+
+<div class="skill-bar">
+<span>CSS 🎨</span>
+<div class="bar">
+<div class="fill" style="width:50%"></div>
+</div>
+</div>
+
+<div class="skill-bar">
+<span>JavaScript ⚡</span>
+<div class="bar">
+<div class="fill" style="width:30%"></div>
+</div>
+</div>
+
+<div class="nav-buttons">
+<button class="nav-btn" onclick="showSection('about')">← Back to About</button>
+<button class="nav-btn" onclick="showSection('projects')">Next: Projects →</button>
+</div>
+
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="page-section">
+
+<h2>Projects</h2>
+
+<div class="projects-container">
+
+<div class="project-card">
+<h3>Gas Detector 🌬️</h3>
+<p>Detects harmful gases and alerts people with buzzer and LED.</p>
+<span class="project-tech">Hardware • Arduino • Sensors</span>
+</div>
+
+<div class="project-card">
+<h3>Desk Lamp 💡</h3>
+<p>A functional desk lamp project that provides light for studying.</p>
+<span class="project-tech">Hardware • Electronics • DIY</span>
+</div>
+
+<div class="project-card">
+<h3>Snake Game 🐍</h3>
+<p>Interactive snake game built with HTML5 Canvas and JavaScript.</p>
+<span class="project-tech">JavaScript • Canvas • Game Dev</span>
+</div>
+
+</div>
+
+<div class="nav-buttons">
+<button class="nav-btn" onclick="showSection('skills')">← Back to Skills</button>
+<button class="nav-btn" onclick="showSection('feedback')">Next: Feedback →</button>
+</div>
+
+</section>
+
+<!-- FEEDBACK SECTION -->
+<section id="feedback" class="page-section">
+
+<h2>Feedback</h2>
+
+<form id="feedbackForm" class="contact-form">
+
+<input type="text" id="name" placeholder="Your Name" required>
+
+<input type="email" id="email" placeholder="Your Email" required>
+
+<textarea id="message" placeholder="Your Message" required></textarea>
+
+<div class="rating">
+<span data-value="1">⭐</span>
+<span data-value="2">⭐</span>
+<span data-value="3">⭐</span>
+<span data-value="4">⭐</span>
+<span data-value="5">⭐</span>
+</div>
+
+<button type="submit">Submit Feedback</button>
+
+<div id="formMessage"></div>
+
+</form>
+
+<div class="nav-buttons">
+<button class="nav-btn" onclick="showSection('projects')">← Back to Projects</button>
+<button class="nav-btn" onclick="showSection('game')">Next: Game →</button>
+</div>
+
+</section>
+
+<!-- GAME SECTION -->
+<section id="game" class="page-section">
+    <h2>🐍 Play Snake Game</h2>
+    
+    <div class="game-container">
+        
+        <div class="level-buttons">
+            <button class="level-btn active" onclick="setLevel(1, event)">🟢 Easy</button>
+            <button class="level-btn" onclick="setLevel(2, event)">🟡 Medium</button>
+            <button class="level-btn" onclick="setLevel(3, event)">🔴 Hard</button>
+        </div>
+        
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        
+        <div class="game-info">
+            <div class="info-item">Score: <span id="score">0</span></div>
+            <div class="info-item">Level: <span id="level">Easy</span></div>
+            <div class="info-item">Speed: <span id="speed">5</span></div>
+        </div>
+        
+        <div class="game-message" id="gameMessage"></div>
+        
+        <div class="game-controls">
+            <button class="game-btn" onclick="startGame()">▶️ Start Game</button>
+            <button class="game-btn" onclick="pauseGame()" id="pauseBtn">⏸️ Pause</button>
+            <button class="game-btn" onclick="resetGame()">🔄 Reset</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to Play:</h3>
+            <p>Use <strong>Arrow Keys</strong> or <strong>WASD</strong> to move the snake 🐍</p>
+            <p>Eat the food 🍎 to grow and earn points!</p>
+            <p>Don't hit the walls or yourself!</p>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+    <button class="nav-btn" onclick="showSection('feedback')">← Back to Feedback</button>
+    <button class="nav-btn" onclick="showSection('contact')">Next: Contact →</button>
+    </div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="page-section">
+
+<h2>Contact</h2>
+
+<div class="contact-info">
+
+<div class="contact-item">
+<h3>Email 📧</h3>
+<p>
+<a href="mailto:buseyi.safari31@ntare-louisenlund.org">
+buseyi.safari31@ntare-louisenlund.org
+</a>
+</p>
+</div>
+
+<div class="contact-item">
+<h3>Instagram 📸</h3>
+<p>
+<a href="https://instagram.com/12gan12dhi" target="_blank">
+@12gan12dhi
+</a>
+</p>
+</div>
+
+<div class="contact-item">
+<h3>Phone 📞</h3>
+<p>
+<a href="tel:+250782098508">
++250 782 098 508
+</a>
+</p>
+</div>
+
+</div>
+
+<div class="nav-buttons">
+<button class="nav-btn" onclick="showSection('game')">← Back to Game</button>
+<button class="nav-btn" onclick="showSection('home')">Back to Home 🏠</button>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-content">
+    
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('about')">About Me</a></li>
+        <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+        <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Connect With Me</h3>
+      <div class="social-links">
+        <a href="https://instagram.com/12gan12dhi" target="_blank" title="Instagram">📸 Instagram</a>
+        <a href="mailto:buseyi.safari31@ntare-louisenlund.org" title="Email">📧 Email</a>
+        <a href="tel:+250782098508" title="Phone">📞 Phone</a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h3>Portfolio Info</h3>
+      <p>Showcasing my projects and technical skills in STEM.</p>
+      <p class="footer-credit">Made with ❤️ by Buseyi Safari</p>
+    </div>
+
+  </div>
+  <!-- FLOATING BACKGROUND ELEMENTS -->
+<div class="floating-icon float-1">🏀</div>
+<div class="floating-icon float-2">⚛️</div>
+<div class="floating-icon float-3">🏀</div>
+<div class="floating-icon float-4">⚛️</div>
+<div class="floating-icon float-5">🏀</div>
+<div class="floating-icon float-6">⚛️</div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 Buseyi's Portfolio. All rights reserved.</p>
+    <p class="footer-tagline">Passion moves the world. 🚀</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
